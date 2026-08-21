@@ -53,10 +53,10 @@
         // }
 
         // Combine them into a single string equation, e.g., "5 + 3 * 2"
-        let equation = ${num1} ${opera1} ${num2} ${opera2} ${num3};
+        let equation =` ${num1} ${opera1} ${num2} ${opera2} ${num3}`;
 
         // Safely execute the mathematical string expression
-        result = new Function(return ${equation})();
+        result = new Function(`return ${equation}`)();
 
         document.getElementById("result").innerText = "Result: " + result;
       });
